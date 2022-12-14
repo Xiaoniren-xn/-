@@ -36,7 +36,7 @@
         <div class="echarts_top_title" ref="echartsH">
           <div class="deal_date"><h1>交易数据 </h1><span> &nbsp;(近七日)</span></div>
           <div id="leftEcharts"
-               style="width: 100%; height: 110%; min-height: 100%; max-height: 110%; margin-left: -16px"></div>
+               style="width: 100%; height: 70%; min-height: 80%; max-height: 110%; margin-left: -16px"></div>
         </div>
       </div>
       <div class="left_bottom">
@@ -270,7 +270,6 @@ const publicImg = reactive({
   justify-content: space-between;
   //height: 100vh;
 
-
   .left {
     width: 78%;
     box-sizing: border-box;
@@ -338,6 +337,7 @@ const publicImg = reactive({
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            flex-wrap: nowrap;
 
 
             p {
@@ -349,6 +349,7 @@ const publicImg = reactive({
             .left_list_item_money {
               color: rgba(16, 16, 16, 1);
               font-size: 1.2rem;
+              text-overflow: ellipsis;
             }
           }
         }
