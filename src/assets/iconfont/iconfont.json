@@ -1,0 +1,72 @@
+{
+  "id": "3820916",
+  "name": "区块链Admin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21242873",
+      "name": "公告",
+      "font_class": "gonggao",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "8019604",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "19447817",
+      "name": "谷歌",
+      "font_class": "google-circle-fill",
+      "unicode": "eaa8",
+      "unicode_decimal": 60072
+    },
+    {
+      "icon_id": "677566",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "2170932",
+      "name": "首页-首页",
+      "font_class": "shouye-shouye",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "2578451",
+      "name": "实名",
+      "font_class": "shiming",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "3590929",
+      "name": "参数配置",
+      "font_class": "canshupeizhi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "4511910",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "6282776",
+      "name": "提现记录",
+      "font_class": "tixianjilu",
+      "unicode": "e6bb",
+      "unicode_decimal": 59067
+    }
+  ]
+}
