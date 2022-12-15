@@ -35,6 +35,8 @@ const AsideWidth = computed(() => {
 
 <style lang="scss">
 
+
+
 .el-main {
   background-color: rgba(243, 244, 246, 1);
   //height: calc(100vh - 60px);
@@ -44,5 +46,8 @@ const AsideWidth = computed(() => {
 
 .el-aside{
   background-color: #282E38;
+  //height: 100%;
+  //position: fixed;
+  //width: 200px;
 }
 </style>

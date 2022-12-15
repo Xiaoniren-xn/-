@@ -87,30 +87,19 @@ const userImg = computed(() => {
 </script>
 
 <style scoped lang="scss">
-::v-deep .is-opend {
-  border: none !important;
-}
 
 .aside {
   width: 100%;
   user-select: none;
   background-color: #282E38;
   border: 0;
-  box-sizing: border-box;
+  //box-sizing: border-box;
 
   transition: all .6s !important;
 
 
-  height: 100vh;
-  //overflow: hidden;
-  //
-  //position: relative;
-  //
-  // ::v-deep .el-menu{
-  //  position: absolute!important;
-  //  left: 0!important;
-  //  top: 0!important;
-  //}
+  //height: 100vh;
+
 
   .user_info {
     display: flex;

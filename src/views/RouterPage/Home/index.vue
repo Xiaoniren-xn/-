@@ -34,16 +34,15 @@
           </div>
         </div>
         <div class="echarts_top_title" ref="echartsH">
-          <div class="deal_date"><h1>交易数据 </h1><span> &nbsp;(近七日)</span></div>
-          <div id="leftEcharts"
-               style="width: 100%; height: 70%; min-height: 80%; max-height: 110%; margin-left: -16px"></div>
+          <h1 class="deal_date">交易数据 <span> &nbsp;(近七日)</span></h1>
+          <div id="leftEcharts"></div>
         </div>
       </div>
       <div class="left_bottom">
         <div class="left_bottom_left">
           <h1><i class="iconfont icon" style="margin-right: 8px; color: #E6A23C; font-size: 20px;margin-left: 4px;">&#xe63c;</i>公告内容
           </h1>
-          <el-table :data="tableData" style="width: 100%; height: 20rem">
+          <el-table :data="tableData" style="width: 100%; height: 86%">
             <el-table-column prop="rank" label="排名"/>
             <el-table-column prop="list" label="消费榜单"/>
             <el-table-column prop="prdMoney" label="消费金额"/>
@@ -52,7 +51,7 @@
         </div>
         <div class="left_bottom_left">
           <h1 style="justify-content: center">充提比例图</h1>
-          <div id="main" style="width: 100%; height: 20rem;"></div>
+          <div id="main"></div>
         </div>
       </div>
     </div>
@@ -69,7 +68,7 @@
       <div class="right_top">
         <h1>配置菜单</h1>
         <div class="right_top_menu">
-          <div class="right_top_menu_item" v-for="(item , index ) in 8" :key="index">
+          <div class="right_top_menu_item" v-for="(item , index ) in 6" :key="index">
             <img :src="publicImg.menuImg" alt="" class="menu_img">
             <span>菜单项</span>
           </div>
@@ -110,42 +109,42 @@ const tableData = [
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 10) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }, {
     rank: Math.floor(Math.random() * 10),
     list: 'Tom',
     prdMoney: Math.floor(Math.random() * 30),
-    lastDay: '80%'
+    lastDay: Math.floor(Math.random() * 100) + '%'
   }
 ]
 
@@ -155,10 +154,7 @@ const tableData = [
  * @author 小倪人  189135569@qq.com
  */
 const echartsOne = (data: any) => {
-
-
   let option;
-
   option = {
     tooltip: {
       trigger: 'axis',
@@ -263,21 +259,34 @@ const publicImg = reactive({
 </script>
 
 <style lang="scss" scoped>
+#leftEcharts {
+  width: 100%;
+  height: 100%;
+  margin-left: -16px;
+  margin-top: -18px;
+}
+
+#main {
+  width: 100%;
+  height: 90%;
+}
+
 
 .home {
   user-select: none;
   display: flex;
   justify-content: space-between;
   //height: 100vh;
+  //height: 100%;
 
   .left {
     width: 78%;
     box-sizing: border-box;
-    height: calc(100vh - 7.8rem);
+    height: 100%;
 
 
     .left_top {
-      height: 60%;
+      height: 50vh;
       background-color: #fff;
       padding: 1.4rem 1.2rem;
       margin-bottom: 1rem;
@@ -289,7 +298,7 @@ const publicImg = reactive({
       }
 
       .left_list {
-        height: 6rem;
+        height: 8vh;
         border-top: 1px solid #f2f3f5;
         padding: 4px 0;
 
@@ -297,7 +306,7 @@ const publicImg = reactive({
         display: flex;
         justify-content: space-between;
         //margin-bottom: 1rem;
-        margin: 2rem 0;
+        margin: 1.4rem 0;
         align-items: center;
 
         .left_list_item {
@@ -356,19 +365,15 @@ const publicImg = reactive({
       }
 
       .echarts_top_title {
-        height: 60%;
+        height: 30vh;
         //background-color: #0f0;
         .deal_date {
           padding: 2px 20px 0 10px;
           display: flex;
-
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 2px;
           align-items: flex-end;
-
-          h1 {
-            font-size: 20px;
-            color: #333333;
-            margin-bottom: 2px;
-          }
 
           span {
             font-size: 16px;
@@ -384,10 +389,11 @@ const publicImg = reactive({
       //background-color: #fff;
       display: flex;
       justify-content: space-between;
+      height: 35vh;
 
       .left_bottom_left {
         width: 49.4%;
-        height: 25.2rem;
+        height: 100%;
         background-color: rgba(255, 255, 255, 1);
         padding: 20px 20px;
         box-sizing: border-box;
@@ -432,7 +438,7 @@ const publicImg = reactive({
       box-sizing: border-box;
       min-height: 25%;
 
-      &:nth-child(1){
+      &:nth-child(1) {
         border: 1px solid #f2f3f5;
       }
 
@@ -440,15 +446,16 @@ const publicImg = reactive({
         font-size: 1rem;
         color: #333333;
         font-weight: 700;
-        padding-left: 1rem;
+        padding-left: 1.3rem;
       }
 
       .right_top_menu {
         display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
+        margin: 12px;
+        //margin-top: 20px;
         flex-wrap: wrap;
         cursor: pointer;
+        overflow: hidden;
 
         .right_top_menu_item {
           width: 25%;
