@@ -9,6 +9,7 @@
           <Header/>
         </el-header>
         <el-main style="padding: 0.6rem 1rem;">
+<!--          <BreadMenu />-->
           <router-view/>
         </el-main>
       </el-container>
@@ -17,6 +18,7 @@
 </template>
 
 <script lang="ts" setup>
+// import BreadMenu from '@/components/common/BreadMenu/index'
 import Aside from '@/components/Aside/index.vue'
 import Header from '@/components/Header/index.vue'
 import {computed} from "vue";
@@ -30,6 +32,7 @@ const AsideWidth = computed(() => {
   return store.isCollapse ? 'width:74px;transition: all .6s;' : 'width: 220px; transition: all .6s;'
 })
 
+
 </script>
 
 
@@ -40,7 +43,9 @@ const AsideWidth = computed(() => {
 .el-main {
   background-color: rgba(243, 244, 246, 1);
   //height: calc(100vh - 60px);
-  height: 100%;
+  //height: 100%;
+  padding: 0.6rem 0.6rem!important;
+  box-sizing: border-box;
 
 }
 

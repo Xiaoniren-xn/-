@@ -10,7 +10,7 @@
         :collapse-transition="true"
         router
     >
-      <div class="user_info">
+      <div class="user_info" @click="goHome()">
         <img src="@/assets/avact.jpg" alt="" class="user_img" :style="userImg">
         <h1 v-if="!store.isCollapse">超级管理员</h1>
       </div>
@@ -71,6 +71,7 @@
 <script setup lang="ts">
 import {computed} from 'vue'
 import {mainStore} from "../../store/index";
+import {useRouter} from "vue-router";
 
 const store = mainStore()
 
@@ -84,6 +85,24 @@ const userImg = computed(() => {
 })
 
 
+/**
+ * @name router 导入路由模块
+ * @author 小倪人   189135569@qq.com
+ */
+const router = useRouter()
+
+/**
+ * @name goHome  侧边栏头部 头像跳转首页  点击事件
+ * @author 小倪人  189135569@qq.com
+ */
+const goHome = ()=>{
+  // console.log(router.currentRoute.value)
+  // if (router.currentRoute.value  !== '/home' || router.currentRoute.value !== '/'){
+  //   console.log(1)
+  // }
+}
+
+
 </script>
 
 <style scoped lang="scss">
@@ -93,7 +112,6 @@ const userImg = computed(() => {
   user-select: none;
   background-color: #282E38;
   border: 0;
-  //box-sizing: border-box;
 
   transition: all .6s !important;
 
@@ -115,6 +133,7 @@ const userImg = computed(() => {
       width: 40px;
       border-radius: 50%;
       margin-left: 8px;
+      cursor: pointer;
     }
 
     h1 {

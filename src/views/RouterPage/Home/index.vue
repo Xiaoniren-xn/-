@@ -55,13 +55,13 @@
         </div>
       </div>
     </div>
-    <div class="right">
+    <div class="right" >
       <div class="right_top">
         <h1>常用菜单</h1>
         <div class="right_top_menu">
-          <div class="right_top_menu_item" v-for="(item , index ) in 8" :key="index">
+          <div class="right_top_menu_item" v-for="(item , index ) in 6" :key="index">
             <img :src="publicImg.menuImg" alt="" class="menu_img">
-            <span>菜单项</span>
+            <span>菜单项{{item}}</span>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
         <div class="right_top_menu">
           <div class="right_top_menu_item" v-for="(item , index ) in 6" :key="index">
             <img :src="publicImg.menuImg" alt="" class="menu_img">
-            <span>菜单项</span>
+            <span>菜单项{{item}}</span>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ import * as echarts from 'echarts';
 
 
 /**
- * 钩子   调用  数据  方法
+ * @name onMounted 钩子调用方法 函数
  * @author 小倪人  189135569@qq.com
  */
 onMounted(() => {
@@ -101,7 +101,7 @@ onMounted(() => {
 
 
 /**
- * 表格假数据
+ * @name tableData 表格假数据
  * @author 小倪人  189135569@qq.com
  */
 const tableData = [
@@ -150,7 +150,7 @@ const tableData = [
 
 
 /**
- * echarts 图表一   假数据  柱状图  显示交易量
+ * @name  echartsOne  图表一   假数据  柱状图  显示交易量
  * @author 小倪人  189135569@qq.com
  */
 const echartsOne = (data: any) => {
@@ -196,7 +196,7 @@ const echartsOne = (data: any) => {
 
 
 /**
- * echarts 图表二   假数据  扇形图  显示交易量
+ * @name  echartsTwo 图表二   假数据  扇形图  显示交易量
  * @author 小倪人  189135569@qq.com
  */
 const echartsTwo = (data: any) => {
@@ -206,7 +206,7 @@ const echartsTwo = (data: any) => {
       trigger: 'item'
     },
     legend: {
-      top: '36%',
+      top: '40%',
       left: 'right',
       orient: 'vertical'
     },
@@ -245,7 +245,7 @@ const echartsTwo = (data: any) => {
 
 
 /**
- * 图片资源  尝试了多次直接本地地址好像不行  require引入
+ * @name   publicImg  图片资源  尝试了多次直接本地地址好像不行  require引入
  * @author 小倪人 189135569@qq.com
  */
 const publicImg = reactive({
@@ -263,7 +263,7 @@ const publicImg = reactive({
   width: 100%;
   height: 100%;
   margin-left: -16px;
-  margin-top: -18px;
+  margin-top: -8px;
 }
 
 #main {
@@ -276,11 +276,9 @@ const publicImg = reactive({
   user-select: none;
   display: flex;
   justify-content: space-between;
-  //height: 100vh;
-  //height: 100%;
 
   .left {
-    width: 78%;
+    width: 81%;
     box-sizing: border-box;
     height: 100%;
 
@@ -292,7 +290,6 @@ const publicImg = reactive({
       margin-bottom: 1rem;
 
       .left_title {
-        //padding-bottom: 1rem;
         color: #333;
         font-size: 22px;
       }
@@ -424,7 +421,7 @@ const publicImg = reactive({
 
   .right {
     //background-color: #fff;
-    width: 21%;
+    width: 18%;
     //max-height: 21%;
     min-height: 18%;
     height: calc(100vh - 5rem);
